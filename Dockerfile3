@@ -1,0 +1,14 @@
+FROM python:3.12-slim
+
+RUN useradd --create-home --shell /bin/bash appuser
+WORKDIR /app
+COPY python/appFlask.py appFlask.py
+COPY python/requirements.txt requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Donner les droits d'accès à appuser
+RUN chown -R appuser:appuser /app
+
+USER appuser
+
+ENTRYPOINT ["python", "appFlask.py"]
