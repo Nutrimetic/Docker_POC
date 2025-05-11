@@ -10,3 +10,5 @@ RUN chmod -R 777 /app
 USER appuser
 
 ENTRYPOINT ["python", "-u", "solo.py"]
+
+HEALTHCHECK --start-period=30s --start-interval=10s --interval=5s --timeout=5s --retries=3 CMD curl -f http://localhost/health || exit 1

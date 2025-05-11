@@ -64,12 +64,12 @@ Utilise ENTRYPOINT pour lancer gunicorn
 
 Accepte des arguments à l’exécution (CMD)
 
-⚙️ 7. ARG et Build-time config
+## ⚙️ 7. ARG et Build-time config
 Exercice 7 :
 
 Ajoute un ARG VERSION, utilisé pour spécifier une version d'un paquet à installer via apt ou pip.
 
-🪛 8. Labels et Metadata
+## 🪛 8. Labels et Metadata
 Exercice 8 :
 
 Ajoute des LABEL avec les infos suivantes :
@@ -80,14 +80,14 @@ Version
 
 Description
 
-💥 9. COPY vs ADD et fichiers Dockerignore
+## 💥 9. COPY vs ADD et fichiers Dockerignore
 Exercice 9 :
 
 Explique la différence entre COPY et ADD
 
 Écris un .dockerignore pour ignorer .git, __pycache__, *.log
 
-🔁 10. BONUS : Paramétrage dynamique (ARG + ENV)
+## 🔁 10. BONUS : Paramétrage dynamique (ARG + ENV)
 Exercice 10 :
 
 Rends le port d'écoute configurable :
